@@ -35,7 +35,7 @@
     in
     {
       nixosConfigurations.sixos = lib.nixosSystem {
-        inherit system pkgs;
+        inherit system;
         specialArgs = inputs // { inherit system; };
         modules = [
           overlays
