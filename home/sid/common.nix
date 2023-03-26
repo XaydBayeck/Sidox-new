@@ -25,6 +25,7 @@
     curl
     w3m
     nyxt
+    ranger
     aria
     clash
   ];
