@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  programs.fish.enable = true;
+
   users.users.sid = {
     isNormalUser = true;
     description = "sid";
