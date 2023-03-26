@@ -21,7 +21,7 @@
       lib = nixpkgs.lib;
       overlays = {
         nixpkgs.overlays = [
-          ./overlays/teaks.nix
+          (import ./overlays/teaks.nix)
           (self: super: { sinur = sinur.packages.${system}; })
         ];
       };
