@@ -8,7 +8,7 @@
   hardware.pulseaudio.enable = true;
   # hardware.pulseaudio.package = pkgs.pulseaudioFull;
 
-  hardware.pulseaudio.extraModules = with pkgs; [ pulseaudio-modules-bt ];
+  # hardware.pulseaudio.extraModules = with pkgs; [ ];
 
   # Whether to enable volume and capture control with keyboard media keys.
   sound.mediaKeys.enable = true;
