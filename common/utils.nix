@@ -4,6 +4,8 @@
   programs.dconf.enable = true;
 
   environment.systemPackages = with pkgs; [
+    alacritty
+    
     xclip
     xorg.xmodmap
     usbutils
