@@ -4,6 +4,7 @@
   services = {
     udisks2.enable = true;
     xserver = {
+      enable = true;
       layout = "us";
       # xkbVariant = "";
       libinput.enable = true;
