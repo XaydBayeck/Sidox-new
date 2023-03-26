@@ -24,4 +24,6 @@
   ];
 
   environment.shells = with pkgs; [ fish nushell ];
+
+  services.greenclip.enable = true;
 }
