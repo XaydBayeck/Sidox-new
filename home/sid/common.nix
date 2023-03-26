@@ -7,6 +7,7 @@
     flameshot
     screenkey
     pcmanfm
+    xarchive
 
     gh
 
