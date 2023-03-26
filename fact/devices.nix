@@ -8,9 +8,9 @@
       # xkbVariant = "";
       libinput.enable = true;
       wacom.enable = true;
-      # videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "nvidia" ];
     };
   };
 
-  # hardware.nvidia.open = true;
+  hardware.nvidia.open = true;
 }
