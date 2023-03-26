@@ -21,4 +21,11 @@
     # Rofi-based interface to select source/sink (aka input/output) with PulseAudio
     # rofi-pulse-select 
   ];
+
+  programs.firefox = {
+    enable = true;
+    languagePacks = [
+      "zh-CN"
+    ];
+  };
 }
