@@ -20,7 +20,6 @@
 
     tdesktop
     element-desktop
-    discord
 
     wget2
     curl

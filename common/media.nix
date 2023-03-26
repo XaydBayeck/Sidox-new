@@ -20,6 +20,7 @@
     # ncpamixer   # An ncurses mixer for PulseAudio inspired by pavucontrol
     # Rofi-based interface to select source/sink (aka input/output) with PulseAudio
     # rofi-pulse-select 
+    discord
   ];
 
   programs.firefox = {
