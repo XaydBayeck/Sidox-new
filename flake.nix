@@ -10,19 +10,23 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs";
+
     # nixvim.url = "github:pta2002/nixvim";
     # nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, sinur, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, sinur, emacs-overlay, ... } @ inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      # pkgs = nixpkgs.legacyPackages.${system};
       lib = nixpkgs.lib;
       overlays = {
         nixpkgs.overlays = [
           (import ./overlays/teaks.nix)
           (self: super: { sinur = sinur.packages.${system}; })
+          emacs-overlay.overlays.emacs
         ];
       };
       home-manager-config = {
