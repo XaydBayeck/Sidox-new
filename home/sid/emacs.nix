@@ -6,7 +6,7 @@
     package = pkgs.emacsWithPackagesFromUsePackage {
       config = ./emacs.el;
       defaultInitFile = true;
-      package = pkgs.emacs;
+      package = pkgs.emacsGit;
 
       extraEmacsPackages = epkgs: [ ];
     };
