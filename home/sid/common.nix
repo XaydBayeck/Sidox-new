@@ -1,4 +1,4 @@
-{ pkgs,... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -40,5 +40,30 @@
 
   services = {
     udiskie.enable = true;
+    dunst = {
+      enable = true;
+      iconTheme = {
+        name = "Tela Red Dark";
+        package = pkgs.tela-icon-theme;
+      };
+      settings = {
+        global = {
+          width = 300;
+          height = 300;
+          offset = "30x50";
+          origin = "top-right";
+          transparency = 10;
+          frame_color = "#ed6f71";
+          font = "DejaVu Sans 9";
+        };
+
+        urgency_normal = {
+          background = "#37474f";
+          foreground = "#efcf71";
+          timeout = 10;
+        };
+      };
+    };
   };
+
 }
