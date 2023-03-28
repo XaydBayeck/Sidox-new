@@ -11,6 +11,5 @@
 
       extraEmacsPackages = epkgs: [ ];
     };
-    extraConfig = builtins.readFile ./emacs.el;
   };
 }
