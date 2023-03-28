@@ -1,3 +1,4 @@
+# nixos/home/sid/emacs.nix
 { pkgs, ... }:
 
 {

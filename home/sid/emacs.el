@@ -106,3 +106,13 @@
   (setq gcmh-idle-delay 5)
   (setq gcmh-high-cons-threshold (* 16 1024 1024)) ; 16MB
   (setq gcmh-verbose init-file-debug))
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  (load-theme 'doom-tokyo-night)
+  (doom-themes-visual-bell-config)
+  ;; (setq doom-themes-treemacs-theme "doom-atom")
+  (doom-themes-org-config))
