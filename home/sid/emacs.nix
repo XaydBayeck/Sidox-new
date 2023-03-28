@@ -5,7 +5,7 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacsWithPackagesFromUsePackage {
-      config = ./emacs.el;
+      config = ./emacs.org;
       defaultInitFile = true;
       package = pkgs.emacsGit;
 
