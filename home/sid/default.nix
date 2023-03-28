@@ -7,6 +7,5 @@
     ./common.nix
     ./develop.nix
     ./shell.nix
-    ./emacs.nix
   ];
 }
