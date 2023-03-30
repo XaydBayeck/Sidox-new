@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     ghc
-    gulie_3_0
+    guile_3_0
     chez
     # NOTE: Language Servers
     rust-analyzer
