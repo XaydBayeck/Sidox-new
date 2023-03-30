@@ -16,12 +16,12 @@
 
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: with epkgs;
+    extraPackages = epkgs:
       let
-        config = [
+        config = with epkgs; [
           use-package
         ];
-        appearance = [
+        appearance = with epkgs; [
           doom-modeline
           doom-themes
           dashboard
@@ -29,11 +29,11 @@
           rainbow-delimiters
           highlight-indent-guides
         ];
-        operate = [
+        operate = with epkgs; [
           meow
           which-key
         ];
-        company = [
+        company = with epkgs; [
           vertico
           orderless
           marginalia
@@ -41,13 +41,13 @@
           consult
           embark-consult
         ];
-        corfu = [
+        corfu = with epkgs;[
           corfu
           corfu-doc
           kind-icon
           cape
         ];
-        edit = [
+        edit = with epkgs;[
           tree-sitter
           tree-sitter-langs
           flycheck
@@ -63,12 +63,12 @@
           yasnippet
           yasnippet-snippets
         ];
-        manager = [
+        manager = with epkgs;[
           treemacs
           projectile
           magit
         ];
-        dependencies = [
+        dependencies = with epkgs;[
           posframe
         ];
       in
