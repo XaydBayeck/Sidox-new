@@ -22,8 +22,8 @@
           use-package
         ];
         appearance = [
-          doom-themes
           doom-modeline
+          doom-themes
           dashboard
           rainbow-mode
           rainbow-delimiters
