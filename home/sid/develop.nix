@@ -5,6 +5,7 @@
     ghc
     guile_3_0
     chez
+    sbcl
     # NOTE: Language Servers
     rust-analyzer
     haskell-language-server
