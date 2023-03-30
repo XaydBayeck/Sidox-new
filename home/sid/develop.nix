@@ -23,7 +23,7 @@
       ];
       appearance = [
         doom-themes
-        doom-modline
+        doom-modeline
         dashboard
         rainbow-mode
         rainbow-delimiters
