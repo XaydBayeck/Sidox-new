@@ -22,7 +22,7 @@
           use-package
         ];
         appearance = with epkgs; [
-          doom-modeline
+          epkgs.doom-modeline
           doom-themes
           dashboard
           rainbow-mode
