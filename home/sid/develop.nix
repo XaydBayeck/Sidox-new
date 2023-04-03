@@ -6,6 +6,7 @@
     guile_3_0
     chez
     sbcl
+    julia-bin
     # NOTE: Language Servers
     rust-analyzer
     haskell-language-server
