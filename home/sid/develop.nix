@@ -13,6 +13,7 @@
     sumneko-lua-language-server
     nil
     clang-tools
+    libvterm
   ];
 
   programs.emacs = {
