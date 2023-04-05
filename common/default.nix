@@ -6,5 +6,6 @@
     ./media.nix
     ./nix-config.nix
     ./utils.nix
+    ./develope
   ];
 }
