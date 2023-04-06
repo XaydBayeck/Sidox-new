@@ -18,7 +18,7 @@
       lib = nixpkgs.lib;
       overlays = {
         nixpkgs.overlays = [
-          (import ./overlays/teaks.nix)
+          # (import ./overlays/teaks.nix)
           (self: super: { sinur = sinur.packages.${system}; })
           emacs-overlay.overlays.emacs
         ];

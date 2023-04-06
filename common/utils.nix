@@ -15,6 +15,7 @@
     rar
     unar
     zip
+    zstd
     unzip
     p7zip
     ripgrep
