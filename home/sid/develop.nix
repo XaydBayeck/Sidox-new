@@ -7,11 +7,13 @@
     chez
     sbcl
     julia-bin
+    typst
     # NOTE: Language Servers
     rust-analyzer
     haskell-language-server
     sumneko-lua-language-server
     nil
+    typst-lsp
     clang-tools
     libvterm
   ];
