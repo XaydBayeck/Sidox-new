@@ -17,5 +17,5 @@ let-env config = ($env.config | update completions {
 )
 
 # alias
-alias ll=ls -l
-alias la=ls -la
+alias ll = ls -l
+alias la = ls -la
