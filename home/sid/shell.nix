@@ -49,19 +49,22 @@
       enable = true;
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
       configFile.source = ./config.nu;
-      extraConfig = 
-          # \'${home.homeDirectory}/.config/nushell/scripts\'
-       ''
-        let-env NU_LIB_DIRS = [
-          '${pkgs.nu_scripts}'
-        ]
-        # Custom Completions
-        use custom_completions/git/git-completions.nu *
-        use custom_completions/nix/nix-completions.nu *
-        use custom_completions/cargo/cargo-completions.nu *
-        use custom_completions/btm/btm-completions.nu *
-        use custom_completions/make/make-completions.nu *
-      '';
+      # extraConfig = 
+      # let
+      #   scripts = "${pkgs.nu_scripts}";
+      # in
+      #     # \'${home.homeDirectory}/.config/nushell/scripts\'
+      #  ''
+      #   let-env NU_LIB_DIRS = [
+      #     '${scripts}'
+      #   ]
+      #   # Custom Completions
+      #   use ${scripts}/custom_completions/git/git-completions.nu *
+      #   use ${scripts}/custom_completions/nix/nix-completions.nu *
+      #   use ${scripts}/custom_completions/cargo/cargo-completions.nu *
+      #   use ${scripts}/custom_completions/btm/btm-completions.nu *
+      #   use ${scripts}/custom_completions/make/make-completions.nu *
+      # '';
     };
     starship = {
       enable = true;
