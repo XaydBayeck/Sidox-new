@@ -50,13 +50,10 @@
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
       configFile.source = ./config.nu;
       extraConfig = 
-      let 
-        scripts = pkgs.nu_scripts;
-      in
           # \'${home.homeDirectory}/.config/nushell/scripts\'
        ''
         let-env NU_LIB_DIRS = [
-          \'${scripts}\'
+          '${pkgs.nu_scripts}'
         ]
         # Custom Completions
         use custom_completions/git/git-completions.nu *
