@@ -17,4 +17,8 @@ let
 in
 {
   services.udev.packages = [ stlink ];
+
+  environment.variables = {
+    EDITOR = "hx";
+  };
 }

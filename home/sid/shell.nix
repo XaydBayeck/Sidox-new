@@ -45,9 +45,10 @@
         prettybat
       ];
     };
-    # nushell = {
-    #   enable = true;
-    # };
+    nushell = {
+      enable = true;
+      packages = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
+    };
     starship = {
       enable = true;
       enableFishIntegration = true;
