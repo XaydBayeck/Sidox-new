@@ -48,7 +48,7 @@
     nushell = {
       enable = true;
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
-      configFile = ./config.nu;
+      configFile.source = ./config.nu;
       extraConfig = 
       let 
         scripts = pkgs.nu_scripts;
