@@ -55,7 +55,7 @@
         ]
 
         if ('${config.home.homeDirectory}/.config/nushell/custom.nu' | path exists) {
-          use ${config.home.homeDirectory}/.config/nushell/custom.nu *
+          source ${config.home.homeDirectory}/.config/nushell/custom.nu
         }
       '';
       # let
