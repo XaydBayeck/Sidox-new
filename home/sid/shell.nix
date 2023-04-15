@@ -47,7 +47,7 @@
     };
     nushell = {
       enable = true;
-      packages = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
+      package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
     };
     starship = {
       enable = true;
