@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   home.packages = with pkgs; [ sqlite ];
@@ -49,7 +49,15 @@
       enable = true;
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
       configFile.source = ./config.nu;
-      # extraConfig = 
+      extraConfig = ''
+        let-env NU_LIB_DIRS = [
+          '${config.home.homeDirectory}/.config/nushell/scripts'
+        ]
+
+        if ('${config.home.homeDirectory}/.config/nushell/custom.nu' | path exists) {
+          use ${config.home.homeDirectory}/.config/nushell/custom.nu *
+        }
+      '';
       # let
       #   scripts = "${pkgs.nu_scripts}";
       # in
