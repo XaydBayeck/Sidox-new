@@ -24,6 +24,8 @@
     tree
     hyfetch
     parted
+
+    nix-output-monitor
   ];
 
   environment.shells = with pkgs; [ fish nushell ];

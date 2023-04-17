@@ -13,9 +13,12 @@
     haskell-language-server
     sumneko-lua-language-server
     nil
+    nixpkgs-fmt
+    nixfmt
     typst-lsp
     clang-tools
     libvterm
+    helix
   ];
 
   programs.emacs = {

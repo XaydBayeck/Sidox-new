@@ -10,6 +10,7 @@
     xarchive
 
     gh
+    networkmanagerapplet
 
     rofi
     polybar
@@ -20,6 +21,8 @@
 
     tdesktop
     element-desktop
+
+    rnote
 
     wget2
     curl
