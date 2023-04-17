@@ -18,7 +18,7 @@
             family = "Hurmit Nerd Font";
             style = "Regular";
           };
-          size = 10;
+          size = 12;
         };
         colors = {
         primary = {
@@ -106,7 +106,7 @@
         ]
 
         if ('${config.home.homeDirectory}/.config/nushell/custom.nu' | path exists) {
-          source ${config.home.homeDirectory}/.config/nushell/custom.nu
+          use ${config.home.homeDirectory}/.config/nushell/custom.nu *
         }
       '';
       # let
