@@ -15,7 +15,7 @@
     rofi
     polybar
     feh
-    picom-jonaburg
+    picom
     trayer
     libnotify
 
