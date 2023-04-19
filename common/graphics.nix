@@ -17,7 +17,7 @@
     # emacs-all-the-icons-fonts
   ];
 
-  # fonts.fontDir.enable = true;
+  fonts.fontDir.enable = true;
 
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts.serif = [
