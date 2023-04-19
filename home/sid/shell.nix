@@ -3,6 +3,9 @@
 {
   home.packages = with pkgs; [ sqlite ];
   programs = {
+    wezterm = {
+      enable = true;
+    };
     alacritty = {
       enable = true;
       settings = {

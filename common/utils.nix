@@ -5,12 +5,12 @@
 
   environment.systemPackages = with pkgs; [
     alacritty
-    
+
     xclip
     xorg.xmodmap
     usbutils
     gparted
-    tldr
+    tealdeer
     httpie
     rar
     unar
