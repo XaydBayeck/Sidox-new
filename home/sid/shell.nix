@@ -127,6 +127,9 @@
       #   use ${scripts}/custom_completions/btm/btm-completions.nu *
       #   use ${scripts}/custom_completions/make/make-completions.nu *
       # '';
+      extraEnv = ''
+        let-env FORGIT = ${pkgs.fishPlugins.forgit}/share/fish/vendor_conf.d/bin/git-forgit
+      '';
     };
     starship = {
       enable = true;
