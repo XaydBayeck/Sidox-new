@@ -103,26 +103,15 @@
       enable = true;
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
       configFile.source = ./config.nu;
-      extraConfig =
-        let
-          scripts = "${pkgs.nu_scripts}";
-        in
-        ''
-          let-env NU_LIB_DIRS = [
-            '${config.home.homeDirectory}/.config/nushell/scripts'
-          ]
+      extraConfig = ''
+        let-env NU_LIB_DIRS = [
+          '${config.home.homeDirectory}/.config/nushell/scripts'
+        ]
 
-          if ('${config.home.homeDirectory}/.config/nushell/custom.nu' | path exists) {
-            use ${config.home.homeDirectory}/.config/nushell/custom.nu *
-          }
-
-          # Custom Completions
-          use ${scripts}/custom_completions/git/git-completions.nu *
-          use ${scripts}/custom_completions/nix/nix-completions.nu *
-          use ${scripts}/custom_completions/cargo/cargo-completions.nu *
-          use ${scripts}/custom_completions/btm/btm-completions.nu *
-          use ${scripts}/custom_completions/make/make-completions.nu *
-        '';
+        if ('${config.home.homeDirectory}/.config/nushell/custom.nu' | path exists) {
+          use ${config.home.homeDirectory}/.config/nushell/custom.nu *
+        }
+      '';
       extraEnv = ''
         let-env FORGIT = ${pkgs.fishPlugins.forgit}/share/fish/vendor_conf.d/bin/git-forgit
       '';
