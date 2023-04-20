@@ -33,7 +33,6 @@
       gtk-xft-hinting=1
       gtk-xft-hintstyle="hintslight"
       gtk-xft-rgba="rgb"
-      gtk-modules="gail:atk-bridge"
       gtk-toolbar-style="GTK_TOOLBAR_BOTH_HORIZ"
       gtk-toolbar-icon-size="GTK_ICON_SIZE_LARGE_TOOLBAR"
     '';
@@ -46,7 +45,6 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-modules = "gail:atk-bridge";
       gtk-toolbar-style = "GTK_TOOLBAR_BOTH_HORIZ";
       gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
     };

@@ -31,4 +31,10 @@
   environment.shells = with pkgs; [ fish nushell ];
 
   services.greenclip.enable = true;
+
+  programs.clash-verge = {
+    enable = true;
+    autoStart = true;
+    tunMode = true;
+  };
 }
