@@ -120,10 +120,12 @@
     starship = {
       enable = true;
       enableFishIntegration = true;
+      enableNushellIntegration = true;
     };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
+      enableNushellIntegration = true;
     };
     broot = {
       enable = true;
