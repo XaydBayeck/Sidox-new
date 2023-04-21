@@ -12,7 +12,7 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.fornt = wezterm.font 'Hurmit Nerd Font'
+config.font = wezterm.font 'Hurmit Nerd Font'
 config.color_scheme = 'tokyonight_storm'
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.85
