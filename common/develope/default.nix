@@ -21,4 +21,6 @@ in
   environment.variables = {
     EDITOR = "hx";
   };
+
+    virtualisation.libvirtd.enable = true;
 }
