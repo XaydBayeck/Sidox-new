@@ -23,6 +23,7 @@
     element-desktop
 
     rnote
+    zk
 
     wget2
     curl
