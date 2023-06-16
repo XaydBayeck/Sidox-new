@@ -11,7 +11,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, sinur, emacs-overlay, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, sinur, ... } @ inputs:
     let
       system = "x86_64-linux";
       # pkgs = nixpkgs.legacyPackages.${system};
@@ -21,7 +21,6 @@
           (import ./overlays/teaks.nix)
           (import ./overlays/packages.nix)
           (self: super: { sinur = sinur.packages.${system}; })
-          emacs-overlay.overlays.emacs
         ];
       };
       home-manager-config = {
