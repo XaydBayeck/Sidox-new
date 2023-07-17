@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 let
-  stlink = pkgs.stdenv.mkDerivation {
-    name = "stlink-udev-rules";
+  embedded = pkgs.stdenv.mkDerivation {
+    name = "embedded-udev-rules";
 
     src = ./rules/.;
 
@@ -12,11 +12,12 @@ let
     installPhase = ''
       mkdir -p $out/etc/udev/rules.d
       cp 70-st-link.rules $out/etc/udev/rules.d
+      cp 99-microbit.rules $out/etc/udev/rules.d
     '';
   };
 in
 {
-  services.udev.packages = [ stlink ];
+  services.udev.packages = [ embedded ];
 
   environment.variables = {
     EDITOR = "hx";
