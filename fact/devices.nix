@@ -1,8 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services = {
-    udisks2.enable = true;
+    myudisks2.enable = true;
     xserver = {
       enable = true;
       layout = "us";
