@@ -13,6 +13,7 @@ let
       mkdir -p $out/etc/udev/rules.d
       cp 70-st-link.rules $out/etc/udev/rules.d
       cp 99-microbit.rules $out/etc/udev/rules.d
+      cp 99-hid.rules $out/etc/udev/rules.d
     '';
   };
 in
