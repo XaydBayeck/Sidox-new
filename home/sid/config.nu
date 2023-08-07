@@ -6,9 +6,9 @@ let fish_completer = {|spans|
   fish --command $'complete "--do-complete=($spans | str join " ")"' | str trim | split row "\n" | each { |line| $line | split column "\t" value description } | flatten
 }
 
-let-env EDITOR = "hx"
+$env.EDITOR = "hx"
 
-let-env config = { 
+$env.config = { 
   completions: {
     external: {
       enable: true

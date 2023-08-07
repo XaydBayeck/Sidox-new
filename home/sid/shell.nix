@@ -105,7 +105,7 @@
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
       configFile.source = ./config.nu;
       extraConfig = ''
-        let-env NU_LIB_DIRS = [
+        $env.NU_LIB_DIRS = [
           '${config.home.homeDirectory}/.config/nushell/scripts'
         ]
 
@@ -114,7 +114,7 @@
         }
       '';
       extraEnv = ''
-        let-env FORGIT = ${pkgs.fishPlugins.forgit}/share/fish/vendor_conf.d/bin/git-forgit
+        $env.FORGIT = ${pkgs.fishPlugins.forgit}/share/fish/vendor_conf.d/bin/git-forgit
       '';
     };
     starship = {
