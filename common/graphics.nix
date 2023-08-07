@@ -3,7 +3,7 @@
 {
   services.xserver.windowManager.leftwm.enable = true;
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     dejavu_fonts # Basic beautiful fonts
     nerdfonts # Programe ligrature fonts
     fira-code # as up
