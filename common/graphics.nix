@@ -8,7 +8,7 @@
     nerdfonts # Programe ligrature fonts
     fira-code # as up
     powerline-fonts # cool fonts mainly used on vim ui
-    google-fonts # must need
+    # google-fonts # must need
     wqy_zenhei # Chinese
     wqy_microhei # Chinese
     noto-fonts-cjk-serif
