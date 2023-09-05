@@ -18,6 +18,62 @@
     typst-lsp
     clang-tools
     libvterm
+
     helix
   ];
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs29-gtk3;
+    extraPackages = epkgs: with epkgs; [
+      #s
+      async
+      minions
+      doom-modeline
+      doom-themes
+      ligature
+      all-the-icons
+      org-modern
+      org-appear
+      olivetti
+      aio
+      xenops
+      corfu
+      kind-icon
+      cape
+      vertico
+      vertico-posframe
+      orderless
+      consult
+      consult-eglot
+      marginalia
+      embark
+      embark-consult
+      tempel
+      tempel-collection
+      eglot-tempel
+      sly
+      geiser-guile
+      #geiser-chez
+      #geiser-racket
+      haskell-mode
+      nix-mode
+      magit
+      treesit-auto
+      rainbow-delimiters
+      hl-todo
+      treemacs
+      treemacs-magit
+      treemacs-icons-dired
+      popper
+      eldoc-box
+      meow
+      sideline-flymake
+      flymake-elisp-config
+      org-roam
+      consult-org-roam
+      vterm
+      treesit-grammars.with-all-grammars
+      ];
+  };
 }

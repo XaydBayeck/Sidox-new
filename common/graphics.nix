@@ -15,6 +15,7 @@
     noto-fonts-cjk-sans
     noto-fonts-emoji # 😃
     # emacs-all-the-icons-fonts
+    lxgw-wenkai
   ];
 
   fonts.fontDir.enable = true;
