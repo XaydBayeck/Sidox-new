@@ -9,9 +9,9 @@
     julia-bin
     typst
     # NOTE: Language Servers
-    rust-analyzer
-    haskell-language-server
-    sumneko-lua-language-server
+    # rust-analyzer
+    # haskell-language-server
+    # sumneko-lua-language-server
     nil
     nixpkgs-fmt
     nixfmt

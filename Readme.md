@@ -126,7 +126,6 @@ modules:
 
 ### overlays
 
-- leftwm
 
 ## home modules
 
