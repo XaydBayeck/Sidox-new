@@ -26,7 +26,6 @@
     enable = true;
     package = pkgs.emacs29-gtk3;
     extraPackages = epkgs: with epkgs; [
-      #s
       async
       minions
       doom-modeline
@@ -68,6 +67,7 @@
       popper
       eldoc-box
       meow
+      sideline
       sideline-flymake
       flymake-elisp-config
       org-roam
