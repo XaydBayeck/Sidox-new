@@ -56,8 +56,8 @@
       #geiser-chez
       #geiser-racket
       haskell-mode
-      # nix-mode
-      nix-ts-mode
+      nix-mode
+      # nix-ts-mode
       ob-nix
       magit
       treesit-auto
