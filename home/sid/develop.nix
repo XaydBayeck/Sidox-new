@@ -73,6 +73,8 @@
       org-roam
       consult-org-roam
       vterm
+      direnv
+      dashboard
       treesit-grammars.with-all-grammars
       ];
   };
