@@ -16,6 +16,7 @@
     noto-fonts-emoji # 😃
     # emacs-all-the-icons-fonts
     lxgw-wenkai
+    symbola # for unicode
   ];
 
   fonts.fontDir.enable = true;
