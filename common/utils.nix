@@ -26,6 +26,7 @@
     parted
 
     nix-output-monitor
+    cachix
   ];
 
   environment.shells = with pkgs; [ fish nushell ];
