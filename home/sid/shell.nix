@@ -103,6 +103,7 @@
     nushell = {
       enable = true;
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
+      package = pkgs.nushellFull;
       configFile.source = ./config.nu;
       extraConfig = ''
         $env.NU_LIB_DIRS = [
