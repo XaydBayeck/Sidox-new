@@ -16,7 +16,6 @@
     nixpkgs-fmt
     nixfmt
     typst-lsp
-    clang-tools
     libvterm
 
     helix
@@ -77,6 +76,7 @@
       vterm
       direnv
       dashboard
+      markdown-mode
       treesit-grammars.with-all-grammars
       ];
   };

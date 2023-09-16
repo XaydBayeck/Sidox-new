@@ -28,8 +28,10 @@
     wget2
     curl
     w3m
-    ranger
+    yazi
     aria
+
+    eww
   ];
 
   programs.mpv = {
