@@ -30,7 +30,6 @@
     w3m
     ranger
     aria
-    # clash
   ];
 
   programs.mpv = {
@@ -42,7 +41,7 @@
   };
 
   services = {
-    #udiskie.enable = true;
+    udiskie.enable = true;
     dunst = {
       enable = true;
       iconTheme = {

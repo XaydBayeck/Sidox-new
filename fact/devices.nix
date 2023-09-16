@@ -3,6 +3,7 @@
 {
   services = {
     #myudisks2.enable = true;
+    udisks2.enable = true;
     xserver = {
       enable = true;
       layout = "us";
