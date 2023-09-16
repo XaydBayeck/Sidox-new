@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ sqlite ];
+  home.packages = with pkgs; [ sqlite nu_scripts ];
   programs = {
     wezterm = {
       enable = true;
