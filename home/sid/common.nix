@@ -70,4 +70,16 @@
     };
   };
 
+  systemd.user.services.clash = {
+    Unit = {
+      Description = "Auto start clash";
+      After = ["network.target"];
+    };
+    Install = {
+      WantedBy = ["default.target"];
+    };
+    Service = {
+      ExecStart = "${pkgs.clash.outPath}/bin/clash";
+    };
+  };
 }
