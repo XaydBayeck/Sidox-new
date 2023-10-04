@@ -24,6 +24,7 @@
     tree
     hyfetch
     parted
+    clash
 
     nix-output-monitor
     cachix
@@ -33,9 +34,9 @@
 
   services.greenclip.enable = true;
 
-  programs.clash-verge = {
-    enable = true;
-    autoStart = true;
-    tunMode = true;
-  };
+  # programs.clash-verge = {
+  #   enable = true;
+  #   autoStart = true;
+  #   tunMode = true;
+  # };
 }
