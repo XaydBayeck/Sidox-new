@@ -24,7 +24,7 @@
     tree
     hyfetch
     parted
-    clash
+    clash-meta
 
     nix-output-monitor
     cachix
