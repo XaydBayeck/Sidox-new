@@ -82,10 +82,17 @@
           src = forgit.src;
         }
       ];
+      shellAliases = {
+        eza = "eza --icons --git";
+        es = "eza";
+        el = "eza -l";
+        ea = "eza -la";
+        et = "eza -lt";
+      };
     };
     eza = {
       enable = true;
-      enableAliases = true;
+      enableAliases = false;
       git = true;
       icons = true;
     };
