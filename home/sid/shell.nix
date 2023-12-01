@@ -83,7 +83,6 @@
         }
       ];
       shellAliases = {
-        eza = "eza --icons --git";
         es = "eza";
         el = "eza -l";
         ea = "eza -la";
