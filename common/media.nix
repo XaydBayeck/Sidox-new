@@ -29,4 +29,6 @@
       "zh-CN"
     ];
   };
+
+  programs.steam.enable = true;
 }
