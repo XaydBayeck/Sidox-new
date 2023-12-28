@@ -72,6 +72,7 @@
       sideline-flymake
       flymake-elisp-config
       org-roam
+      org-roam-ui
       consult-org-roam
       vterm
       direnv
