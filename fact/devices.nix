@@ -6,7 +6,7 @@
     udisks2.enable = true;
     xserver = {
       enable = true;
-      layout = "us";
+      xkb.layout = "us";
       # xkbVariant = "";
       libinput.enable = true;
       wacom.enable = true;
