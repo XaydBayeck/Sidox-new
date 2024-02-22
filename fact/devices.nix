@@ -14,5 +14,5 @@
     };
   };
 
-  hardware.nvidia.open = true;
+  # hardware.nvidia.open = true;
 }
