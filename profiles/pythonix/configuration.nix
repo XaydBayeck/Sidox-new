@@ -91,7 +91,7 @@
     auto-optimise-store = true;
   };
 
-  nix.channel.enable = false;
+  # nix.channel.enable = false;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
