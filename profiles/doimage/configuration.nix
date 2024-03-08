@@ -1,15 +1,19 @@
-{ ... }:
+{ nixpkgs, ... }:
 
 {
-  # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
-  boot.loader.grub.enable = false;
-  boot.loader.efi.canTouchEfiVariables = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
-
+  imports = [
+    ./configuration.nix
+  ];
+  
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = false;
+  };
+
+  environment.etc.nixpkgs.source = nixpkgs;
+
+  services.cloud-init = {
+    enable = true;
   };
 
   users.users.root = {

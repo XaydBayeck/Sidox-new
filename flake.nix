@@ -9,9 +9,14 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, sinur, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, sinur, nixos-generators,... } @ inputs:
     let
       system = "x86_64-linux";
       # pkgs = nixpkgs.legacyPackages.${system};
@@ -31,35 +36,44 @@
         };
       };
     in
-    {
-      nixosConfigurations.sixos = lib.nixosSystem {
-        inherit system;
-        specialArgs = inputs // { inherit system; };
-        modules = [
-          overlays
-          ./profiles/sixos/configuration.nix
-          home-manager.nixosModules.home-manager
-          home-manager-config
-        ];
+      {
+        packages.${system} = {
+          doimg = nixos-generators.nixosGenerate {
+            inherit system;
+            specialArgs = inputs // { inherit system; };
+            modules = [
+              ./profiles/doimage/configuration.nix
+            ];
+            format = "do";
+          };
+        };
+        nixosConfigurations.sixos = lib.nixosSystem {
+          inherit system;
+          specialArgs = inputs // { inherit system; };
+          modules = [
+            overlays
+            ./profiles/sixos/configuration.nix
+            home-manager.nixosModules.home-manager
+            home-manager-config
+          ];
+        };
+        nixosConfigurations.pythonix = lib.nixosSystem {
+          inherit system;
+          specialArgs = inputs // { inherit system; };
+          modules = [
+            overlays
+            ./profiles/pythonix/configuration.nix
+            home-manager.nixosModules.home-manager
+            home-manager-config
+            "${inputs.nixpkgs}/nixos/modules/virtualisation/virtualbox-image.nix"
+          ];
+        };
+        nixosConfigurations.doimage = lib.nixosSystem {
+          inherit system;
+          specialArgs = inputs // { inherit system; };
+          modules = [ 
+            ./profiles/doimage/configuration.nix
+          ];
+        };
       };
-      nixosConfigurations.pythonix = lib.nixosSystem {
-        inherit system;
-        specialArgs = inputs // { inherit system; };
-        modules = [
-          overlays
-          ./profiles/pythonix/configuration.nix
-          home-manager.nixosModules.home-manager
-          home-manager-config
-          "${inputs.nixpkgs}/nixos/modules/virtualisation/virtualbox-image.nix"
-        ];
-      };
-      nixosConfigurations.doimage = lib.nixosSystem {
-        inherit system;
-        specialArgs = inputs // { inherit system; };
-        modules = [ 
-          ./profiles/doimage/configuration.nix
-          (nixpkgs + "/nixos/modules/virtualisation/digital-ocean-image.nix")
-        ];
-      };
-   };
 }

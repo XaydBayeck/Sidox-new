@@ -14,6 +14,9 @@
 
   nix.channel.enable = false;
   nix.registry.nixpkgs.flake = nixpkgs;
-  environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
-  nix.settings.nix-path = lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
+  # environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
+  nix.nixPath = [
+    "nixpkgs=${nixpkgs}"
+    "nixos-config=/nix/var/nix/profiles/per-user/root/channels/nixos"
+  ];
 }
