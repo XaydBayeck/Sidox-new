@@ -42,5 +42,24 @@
           home-manager-config
         ];
       };
-    };
+      nixosConfigurations.pythonix = lib.nixosSystem {
+        inherit system;
+        specialArgs = inputs // { inherit system; };
+        modules = [
+          overlays
+          ./profiles/pythonix/configuration.nix
+          home-manager.nixosModules.home-manager
+          home-manager-config
+          "${inputs.nixpkgs}/nixos/modules/virtualisation/virtualbox-image.nix"
+        ];
+      };
+      nixosConfigurations.doimage = lib.nixosSystem {
+        inherit system;
+        specialArgs = inputs // { inherit system; };
+        modules = [ 
+          ./profiles/doimage/configuration.nix
+          (nixpkgs + "/nixos/modules/virtualisation/digital-ocean-image.nix")
+        ];
+      };
+   };
 }
