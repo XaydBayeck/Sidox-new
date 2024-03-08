@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./configuration.nix
+    ./basic.nix
   ];
   
   services.openssh = {
