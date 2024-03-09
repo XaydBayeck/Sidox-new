@@ -19,6 +19,7 @@
     libvterm
 
     helix
+    gns3-gui
   ];
 
   programs.emacs = {
