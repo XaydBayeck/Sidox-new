@@ -1,4 +1,4 @@
-{ nixpkgs, ... }:
+{ nixpkgs, pkgs, ... }:
 
 {
   imports = [
@@ -26,6 +26,8 @@
     # };
   };
 
+  # virtualisation.libvirtd
+
   networking.firewall.allowedTCPPorts = [ 3080 ];
 
   users.users.root = {
@@ -40,6 +42,10 @@
   #   device = "/swap/swapfile";
   #   size = 1024 * 2; # 2 GB
   # }];
+
+  environment.systemPackages = with pkgs; [
+    libvirt
+  ];
 
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
