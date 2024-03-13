@@ -91,7 +91,6 @@
     };
     eza = {
       enable = true;
-      enableAliases = false;
       git = true;
       icons = true;
     };
