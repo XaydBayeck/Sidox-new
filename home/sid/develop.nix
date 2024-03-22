@@ -26,6 +26,7 @@
     enable = true;
     package = pkgs.emacs29-gtk3;
     extraPackages = epkgs: with epkgs; [
+      ebnf-mode
       async
       minions
       doom-modeline
