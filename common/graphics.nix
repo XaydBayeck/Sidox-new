@@ -17,6 +17,7 @@
     # emacs-all-the-icons-fonts
     lxgw-wenkai
     symbola # for unicode
+    bqn386
   ];
 
   fonts.fontDir.enable = true;
