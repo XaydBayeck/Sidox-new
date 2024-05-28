@@ -14,7 +14,7 @@
     # sumneko-lua-language-server
     nil
     nixpkgs-fmt
-    nixfmt
+    nixfmt-classic
     typst-lsp
     libvterm
 
