@@ -108,7 +108,6 @@
     nushell = {
       enable = true;
       # package = pkgs.nushell.override { additionalFeatures = (p: p ++ ["dataframe"]); };
-      package = pkgs.nushellFull;
       configFile.source = ./config.nu;
       extraConfig = ''
         $env.NU_LIB_DIRS = [
@@ -128,11 +127,11 @@
       enableFishIntegration = true;
       enableNushellIntegration = true;
     };
-    # zoxide = {
-    #   enable = true;
-    #   enableFishIntegration = true;
-    #   enableNushellIntegration = true;
-    # };
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+      enableNushellIntegration = true;
+    };
     broot = {
       enable = true;
       enableFishIntegration = true;
@@ -151,7 +150,6 @@
     };
     direnv = {
       enable = true;
-      #enableFishIntegration = true;
       enableNushellIntegration = true;
       nix-direnv.enable = true;
     };
