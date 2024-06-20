@@ -80,6 +80,7 @@
       direnv
       dashboard
       markdown-mode
+      idris2-mode
       treesit-grammars.with-all-grammars
       ];
   };
