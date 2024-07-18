@@ -11,7 +11,7 @@
   # hardware.pulseaudio.extraModules = with pkgs; [ ];
 
   # Whether to enable volume and capture control with keyboard media keys.
-  sound.mediaKeys.enable = true;
+  # sound.mediaKeys.enable = true;
 
   environment.systemPackages = with pkgs; [
     pavucontrol # PulseAudio Volume Control
