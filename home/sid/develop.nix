@@ -19,6 +19,8 @@
     libvterm
 
     helix
+
+    opera
   ];
 
   programs.emacs = {
@@ -53,7 +55,7 @@
       eglot-tempel
       sly
       geiser-guile
-      #geiser-chez
+      geiser-chez
       #geiser-racket
       haskell-mode
       nix-mode

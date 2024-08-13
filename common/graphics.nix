@@ -32,4 +32,18 @@
   fonts.fontconfig.defaultFonts.monospace = [
     "DejaVu Sans Mono"
   ];
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      oo7
+    ];
+    config.common = {
+      default = ["gtk"];
+      "org.freedesktop.impl.portal.Secret" = [
+        "oo7"
+      ];
+    };
+  };
 }

@@ -21,6 +21,7 @@
     # Rofi-based interface to select source/sink (aka input/output) with PulseAudio
     # rofi-pulse-select 
     discord
+    door-knocker
   ];
 
   programs.firefox = {
