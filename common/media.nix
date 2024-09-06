@@ -5,8 +5,12 @@
   # Volume Control: $ alsamixer
   # test: speaker-test -c 2
   # sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = true;
   # hardware.pulseaudio.package = pkgs.pulseaudioFull;
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   # hardware.pulseaudio.extraModules = with pkgs; [ ];
 

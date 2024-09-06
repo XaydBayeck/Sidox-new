@@ -2,7 +2,7 @@
   description = "Sid's NixOS redesigning";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     sinur.url = "github:XaydBayeck/Sinur";
     sinur.inputs.nixpkgs.follows = "nixpkgs";
