@@ -1,5 +1,5 @@
 -- Add config folder to watchlist for config reloads.
-local wezterm = require 'wezterm';
+local wezterm = require 'wezterm'
 wezterm.add_to_config_reload_watch_list(wezterm.config_dir)
 
 -- This table will hold the configuration.
@@ -13,7 +13,7 @@ end
 
 -- This is where you actually apply your config choices
 config.font = wezterm.font 'Hurmit Nerd Font'
-config.color_scheme = 'tokyonight_storm'
+config.color_scheme = 'Tokyo Night Storm'
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.85
 
