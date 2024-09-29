@@ -32,6 +32,16 @@
     aria
 
     eww
+
+    libreoffice
+    lutris
+    idris2
+    idris2Packages.idris2Lsp
+    rlwrap
+    inetutils
+    prismlauncher
+    gamemode
+    vulkan-tools
   ];
 
   programs.mpv = {

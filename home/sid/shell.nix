@@ -119,7 +119,7 @@
         }
       '';
       extraEnv = ''
-        $env.FORGIT = ${pkgs.fishPlugins.forgit}/share/fish/vendor_conf.d/bin/git-forgit
+        $env.FORGIT = "${pkgs.fishPlugins.forgit}/share/fish/vendor_conf.d/bin/git-forgit"
       '';
     };
     starship = {
