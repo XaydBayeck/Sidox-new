@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   programs.dconf.enable = true;
@@ -29,6 +29,11 @@
     hyfetch
     parted
     clash-meta
+    clash-nyanpasu
+    (makeAutostartItem {
+      name = "clash-nyanpasu";
+      package = clash-nyanpasu;
+    })
 
     nix-output-monitor
     cachix
@@ -38,9 +43,10 @@
 
   services.greenclip.enable = true;
 
-  # programs.clash-verge = {
-  #   enable = true;
-  #   autoStart = true;
-  #   tunMode = true;
+  # security.wrappers.clash-nyanpasu = {
+  #   owner = "root";
+  #   group = "root";
+  #   capabilities = "cap_net_bind_service,cap_net_admin=+ep";
+  #   source = "${lib.getExe pkgs.clash-nyanpasu}";
   # };
 }
