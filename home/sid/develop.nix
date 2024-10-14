@@ -25,7 +25,11 @@
 
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs29-gtk3;
+    package = pkgs.emacs30-gtk3.overrideAttrs (final: prev: {
+      configureFlags = let
+        f = s: if s=="--without-xwidgets" then "--with-xwidgets" else s;
+      in (map f prev.configureFlags);
+    });
     extraPackages = epkgs: with epkgs; [
       ebnf-mode
       async
