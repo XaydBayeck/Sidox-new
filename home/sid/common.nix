@@ -7,7 +7,8 @@
     flameshot
     screenkey
     pcmanfm
-    xarchive
+    #xarchive
+    file-roller
 
     gh
     networkmanagerapplet

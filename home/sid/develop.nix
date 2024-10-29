@@ -37,8 +37,8 @@
       org-modern
       org-appear
       olivetti
-      aio
-      xenops
+      #aio
+      #xenops
       corfu
       kind-icon
       cape
