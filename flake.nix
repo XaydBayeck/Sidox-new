@@ -7,6 +7,9 @@
     sinur.url = "github:XaydBayeck/Sinur";
     sinur.inputs.nixpkgs.follows = "nixpkgs";
 
+    wezterm.url = "github:wez/wezterm/main?dir=nix";
+    wezterm.inputs.nixpkgs.follows = "nixpkgs";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -16,7 +19,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, sinur, nixos-generators,... } @ inputs:
+  outputs = { nixpkgs, home-manager, sinur, wezterm, nixos-generators,... } @ inputs:
     let
       system = "x86_64-linux";
       # pkgs = nixpkgs.legacyPackages.${system};
@@ -25,7 +28,10 @@
         nixpkgs.overlays = [
           (import ./overlays/teaks.nix)
           (import ./overlays/packages.nix)
-          (self: super: { sinur = sinur.packages.${system}; })
+          (self: super: { 
+            sinur = sinur.packages.${system}; 
+            wezterm = wezterm.packages.${system}.default;
+          })
         ];
       };
       home-manager-config = {
