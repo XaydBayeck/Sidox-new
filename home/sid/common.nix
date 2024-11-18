@@ -81,6 +81,8 @@
     };
   };
 
+  services.gnome-keyring.enable = true;
+
   # systemd.user.services.clash = {
   #   Unit = {
   #     Description = "Auto start clash";
