@@ -1,11 +1,29 @@
 { pkgs, ... }:
 
-{
+let
+    nerdfonts # Programe ligrature fonts
+    = with pkgs.nerd-fonts; [
+      iosevka
+      iosevka-term
+      agave
+      jetbrains-mono
+      fira-code
+      hack
+      hasklug
+      caskaydia-cove
+      caskaydia-mono
+      code-new-roman
+      hurmit
+      monoid
+      dejavu-sans-mono
+      zed-mono
+      noto
+    ];
+in {
   services.xserver.windowManager.leftwm.enable = true;
 
   fonts.packages = with pkgs; [
     dejavu_fonts # Basic beautiful fonts
-    nerdfonts # Programe ligrature fonts
     fira-code # as up
     powerline-fonts # cool fonts mainly used on vim ui
     # google-fonts # must need
@@ -18,7 +36,7 @@
     lxgw-wenkai
     #symbola # for unicode
     bqn386
-  ];
+  ] ++ nerdfonts;
 
   fonts.fontDir.enable = true;
 

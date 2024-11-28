@@ -34,6 +34,7 @@
       doom-themes
       ligature
       all-the-icons
+      nerd-icons
       org-modern
       org-appear
       olivetti
@@ -82,6 +83,8 @@
       dashboard
       markdown-mode
       idris2-mode
+      rust-mode
+      rustic
       treesit-grammars.with-all-grammars
       ];
   };
