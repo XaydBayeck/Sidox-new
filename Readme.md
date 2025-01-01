@@ -143,7 +143,7 @@ modules:
 ### develop
 
 - packages:
-  - ghc
+  - 
 
 ### shell
 

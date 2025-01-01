@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    ghc
     guile_3_0
     chez
     sbcl
