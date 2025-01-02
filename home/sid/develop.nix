@@ -86,5 +86,8 @@
       rustic
       treesit-grammars.with-all-grammars
       ];
+    overrides = final: prev: {
+      eglot = null;
+    };
   };
 }
