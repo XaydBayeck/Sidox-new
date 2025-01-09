@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    guile_3_0
+    guile
     chez
     sbcl
     julia-bin
@@ -11,7 +11,7 @@
     # rust-analyzer
     # haskell-language-server
     # sumneko-lua-language-server
-    nil
+    nixd
     nixpkgs-fmt
     nixfmt-classic
     typst-lsp
@@ -81,9 +81,11 @@
       direnv
       dashboard
       markdown-mode
+      idris-mode
       idris2-mode
       rust-mode
       rustic
+      proof-general
       treesit-grammars.with-all-grammars
       ];
     overrides = final: prev: {

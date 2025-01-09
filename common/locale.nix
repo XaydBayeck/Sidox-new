@@ -9,7 +9,8 @@
       fcitx5-gtk
       fcitx5-rime
       fcitx5-chinese-addons
-      sinur.fcitx5-nord
+      fcitx5-nord
+      fcitx5-fluent
     ];
   };
 
