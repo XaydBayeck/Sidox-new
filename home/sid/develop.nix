@@ -14,7 +14,7 @@
     nixd
     nixpkgs-fmt
     nixfmt-classic
-    typst-lsp
+    tinymist
     libvterm
 
     helix
