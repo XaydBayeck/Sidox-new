@@ -95,4 +95,14 @@
   #     ExecStart = "${pkgs.clash.outPath}/bin/clash";
   #   };
   # };
+  
+  xdg.mimeApps = {
+    enable = true;
+    associations.added = {
+      "x-scheme-handler/appflowy-flutter" = [ "appflowy.desktop" ];
+    };
+    defaultApplications = {
+      "x-scheme-handler/appflowy-flutter" = [ "appflowy.desktop" ];
+    };
+  };
 }
